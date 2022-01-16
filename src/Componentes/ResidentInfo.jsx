@@ -9,7 +9,7 @@ const ResidentInfo = ({character}) => {
     useEffect(()=>{
         axios.get(character)
         .then(res => setCharacterinfo(res.data))
-    },[character.resident])
+    },[character])
 
     return (
         <div className='card-resident'>
