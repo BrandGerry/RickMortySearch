@@ -8,6 +8,37 @@
     display: flex;
     justify-content: space-evenly;
  }
+ .viñeta-roja{
+    height: 15px;
+    width: 15px;
+    background-color: rgba(155, 19, 48, 0.788);
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+ }
+ .viñeta-azul{
+   height: 15px;
+   width: 15px;
+   background-color: rgba(68, 88, 173, 0.89);
+   margin: 5px;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+}
+.viñeta-gris{
+   height: 15px;
+   width: 15px;
+   background-color: rgb(34, 31, 32);
+   margin: 5px;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+}
+ .viñeta-container{
+    display: flex;
+    flex-direction: row;
+ }
  .card-resident img {
     height: 5rem;
     margin: 0 5px;

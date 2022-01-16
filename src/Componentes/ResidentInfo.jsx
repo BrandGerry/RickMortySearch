@@ -11,6 +11,17 @@ const ResidentInfo = ({character}) => {
         .then(res => setCharacterinfo(res.data))
     },[character])
 
+    const getviñeta = () => {
+		if(Characterinfo.status=="Dead"){  // Si el usuario no esta loggeado, muestra el login
+			return "viñeta-roja"
+		} else if (Characterinfo.status=="Alive"){     
+            return "viñeta-azul"        // Si esta loggeado, valida su rol
+		}
+        else{
+            return "viñeta-gris"
+        }
+}
+
     return (
         <div className='card-resident'>
             <div className='container-img'>
@@ -19,7 +30,10 @@ const ResidentInfo = ({character}) => {
             <div className='container-info'>
                 <h3>Name: {Characterinfo.name}</h3>
                 <article>
-                    <p>Status: {Characterinfo.status}</p>
+                    <div className='viñeta-container'>
+                        <div className={getviñeta()}></div>
+                        <p>Status: {Characterinfo.status}</p>
+                    </div>
                     <p>Origin: {Characterinfo.origin?.name}</p>
                     <p>N° de episodios: {Characterinfo.episode?.length}</p>
                 </article>
